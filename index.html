@@ -6,7 +6,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-88304122-4');
 </script>
 
@@ -50,7 +49,12 @@
               <a class="nav-link js-scroll-trigger" href="disclaimer.html">Disclaimer</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary btn-lg js-scroll-trigger" href="#about">Subscribe Now</a>
+              <a class="btn btn-primary btn-lg js-scroll-trigger" href="#about" onClick="ga('send', {
+                  hitType: 'event',
+                  eventCategory: 'Videos',
+                  eventAction: 'play',
+                  eventLabel: 'Fall Campaign'
+                });">Subscribe Now</a>
             </li>
           </ul>
         </div>
